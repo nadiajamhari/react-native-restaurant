@@ -22,14 +22,14 @@ const RestaurantCard: React.FC<IRestaurant> = ({
   onPress,
 }) => {
   return (
-    <Pressable onPress={() => onPress(name)}>
-      <Box alignItems="center">
-        <Box
-          maxW="80"
-          rounded="lg"
-          overflow="hidden"
-          borderColor="coolGray.200"
-          borderWidth="1">
+    <Box alignItems="center" mb="2" mt="3">
+      <Box
+        maxW="80"
+        rounded="lg"
+        overflow="hidden"
+        borderColor="coolGray.200"
+        borderWidth="1">
+        <Pressable onPress={() => onPress(name)}>
           <Box>
             <AspectRatio w="100%" ratio={16 / 9}>
               <Image
@@ -46,10 +46,9 @@ const RestaurantCard: React.FC<IRestaurant> = ({
               <Text>{tagLine}</Text>
             </Stack>
           </Stack>
-        </Box>
-        <Text></Text>
+        </Pressable>
       </Box>
-    </Pressable>
+    </Box>
   );
 };
 export default RestaurantCard;

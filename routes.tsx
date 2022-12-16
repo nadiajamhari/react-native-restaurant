@@ -1,4 +1,5 @@
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {Button, Image} from 'native-base';
 
 import Home from './src/components/Common/home';
 import RestaurantDetails from './src/components/Restaurant/restaurantDetails';
@@ -23,7 +24,19 @@ const Routes = () => {
       <RootStack.Screen
         name="RestaurantList"
         component={RestaurantList}
-        options={{title: 'Restaurants'}}
+        options={{
+          title: 'Restaurants',
+          headerRight: () => (
+            <Image
+              style={{
+                width: 30,
+                height: 30,
+              }}
+              source={require('./src/assets/logo/restaurant.png')}
+              alt="restaurant logo"
+            />
+          ),
+        }}
       />
       <RootStack.Screen
         name="RestaurantDetails"
