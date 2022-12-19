@@ -9,13 +9,15 @@ import {
   Image,
   Box,
 } from 'native-base';
-import {RootStackParams} from '../../../routes';
+import {RootStackParams} from '../../../routesTabNavigator';
+// import TopBackNavigation from '../Common/topBackNavigation';
 
 type Props = NativeStackScreenProps<RootStackParams, 'RestaurantDetails'>;
 
 const RestaurantDetails = ({route}: Props) => {
   return (
     <ScrollView>
+      {/* <TopBackNavigation /> */}
       <Stack space={3} p="4">
         <Heading textAlign="center">{route.params.name}</Heading>
         <Box borderWidth="1" borderColor="coolGray.200" shadow="5">
